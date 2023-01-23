@@ -1,0 +1,73 @@
+.login{
+    padding: 2em;
+    margin-top: 6em;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+}
+
+.iniciopanel span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    font-size: 3em;
+    color: #0D6EFD;
+}
+
+.iniciopanel h5{
+    text-align: center;
+}
+
+.listacontacto, .iniciopanel, .testimonioad,.usuarios{
+    margin-top: 80px;
+}
+
+.listacontacto p{
+    margin: 3px;
+}
+
+.listacontacto h3, .iniciopanel h3 ,.testimonioad h3 , .usuarios h3{
+    margin-bottom: 8px;
+    color:#3a3737
+}
+.listacontacto h4,h3{
+    margin: 0;
+}
+
+.listacontacto .mensaje{
+    margin-top: 10px;
+
+}
+
+.listacontacto .fecha{
+    font-size: 10px;
+}
+.listacontacto .card{
+    margin-bottom: 1em;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+    padding: 1em;
+   background-color: #f1f1f1;
+   border: 1px solid #efefef;
+   color: #808080;
+}
+
+.listacontacto h4{
+    color: #0D6EFD;
+}
+
+.listacontacto h4 span{
+    color: #1abc9c;
+}
+.listacontacto a{
+    margin-bottom: 5px;
+}
+
+.fechac{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.testimonioad tr th{
+    font-weight: 500;
+}

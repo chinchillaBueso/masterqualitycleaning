@@ -1,0 +1,11 @@
+exports.Perfil=(req,res,next)=>{
+    if(req.session.user){
+        if(req.session.user.perfil==='admin'){
+            next()
+         }else{
+             res.redirect('/admin')
+         }
+    }else{
+        res.redirect('/login')
+    }
+}

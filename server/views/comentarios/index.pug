@@ -1,0 +1,49 @@
+extends ../administracion/index
+block contenidosistema 
+    main.container.testimonioad
+      .row.justify-content-center
+          h3
+           i.fa-solid.fa-comments 
+           |  Administracion de Comentarios 
+          hr
+          .col-12 
+             table.table.table-striped  
+                thead 
+                    tr 
+                      th(scope='col') ID 
+                      th(scope='col') Usuario 
+                      th(scope='col') Mensaje
+                      th(scope='col') Fecha
+                      th(scope='col') Estado 
+                      th(scope='col')
+                tbody 
+                 each testimoniales in jjson.testimonios 
+                   tr
+                    td=testimoniales.dataValues.id
+                    td=testimoniales.dataValues.nombre
+                    td=testimoniales.dataValues.mensaje
+                    td=testimoniales.dataValues.fecha 
+                    td=testimoniales.dataValues.estado
+                    td
+                      
+                      if(testimoniales.dataValues.estado==='espera')
+                       a.btn.btn-primary.form-control(href=`/testimoniosad/${jjson.page.desde}&${jjson.page.registropp}/${testimoniales.dataValues.id}`)
+                        i.fa-solid.fa-check
+                      else  
+                        a.btn.btn-danger.form-control(href=`/testimoniosad/${jjson.page.desde}&${jjson.page.registropp}/${testimoniales.dataValues.id}`)
+                         i.fa-solid.fa-xmark
+      .row.justify-content-center
+        p.text-end #{jjson.page.registropp} / #{jjson.page.total}
+      .row.justify-content-center 
+       .col-1.col-md-1
+          if jjson.page.registropp >= jjson.page.total  && jjson.page.desde-10>=0
+            a.btn.btn-success(href=`/testimoniosad/${jjson.page.desde-10}&${jjson.page.desde}`) 
+               i.fa-solid.fa-angles-left   
+          if jjson.page.registropp <=jjson.page.total
+            a.btn.btn-success(href=`/testimoniosad/${jjson.page.registropp}&${jjson.page.registropp+10}`) 
+               i.fa-solid.fa-angles-right    
+            
+
+                 
+            
+                

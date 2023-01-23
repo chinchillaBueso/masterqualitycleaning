@@ -1,0 +1,37 @@
+extends ../layout/index
+
+block contenido
+  main
+    section.container-fluid.nosotros
+      .container
+        .row 
+            .col-12.col-sm-12.col-md-6.imagen(data-aos='fade-right')
+                img(src="img/logonosotros.png", alt="Logo Master Quality Cleaning",width="250px")
+            .col-12.col-sm-12.col-md-6.articulo
+                h2 ¿Quiénes somos?
+                p  Somos una empresa dedicada al rubro de la limpieza profesional de espacios residenciales y comerciales. Brindamos soluciones integrales adaptadas a las necesidades de nuestros clientes.  
+                a.botonw(href='https://wa.me/ 17863717464') 
+                 i.fa-brands.fa-whatsapp
+                 |  Escribenos
+    section.container.presentacion
+        include ../layout/partials/valores
+        .row.mt-5.presentacion
+            .col-12.d-flex.justify-content-center.align-items-center
+              .card 
+                .card-encabezado 
+                    img(src="img/KellyValle.jpg", alt="Kelly Valle",width="250px")              
+                    .info-personal.nombre 
+                      i.fa-solid.fa-user
+                      |  Kerlin Valle 
+                    .info-personal.cargo  General Manager MQ Clenaing LLC
+                .card-acciones 
+                    .botones.grandes 
+                      a.botonw(href='https://wa.me/ 17863717464') 
+                         i.fa-brands.fa-whatsapp
+                         |  Escribenos
+                    hr
+                    .acercade 
+                        h5 Un gusto saludarte!
+                        P Soy Gerente y fundadora de Master Quality Cleaning LLC
+                        p Tengo 8 años de experiencia trabajando con limpiezas de casas vacacionales en el área de Hallandale Beach, Florida Estados Unidos.
+                        p Durante este tiempo he adquirido la preparación necesaria para brindarte un servicio de limpieza profesional a tu medida.

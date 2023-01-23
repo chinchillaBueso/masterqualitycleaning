@@ -1,0 +1,26 @@
+extends ../administracion/index
+block contenidosistema 
+    main.container.iniciopanel
+      .row.justify-content-center
+          h3
+           i.fa-solid.fa-toolbox 
+           |  Panel de Control 
+          hr
+          .col-12.col-md-4
+           .card
+             p.titulo=testimonios
+             span    
+              i.fa-solid.fa-comment
+             .card-body
+               h5.card-title Comentarios
+               p.card-text.text-center Administra los comentarios de tu página web
+               a.btn.btn-primary.form-control(href='/testimoniosad/0&10') Administrar
+          .col-12.col-md-4
+           .card
+             p.titulo=numtes
+             span 
+              i.fa-solid.fa-file-import
+             .card-body
+               h5.card-title Bandeja de Entrada
+               p.card-text.text-center Administra tus mensajes de contacto de tu página web
+               a.btn.btn-primary.form-control(href='/contactos/0&5') Administrar

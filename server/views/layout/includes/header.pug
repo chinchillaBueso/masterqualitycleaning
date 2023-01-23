@@ -1,0 +1,51 @@
+header 
+ nav.navbar.navbar-dark.bg-primary.fixed-top
+  .container-fluid
+    a.navbar-brand.text-light(href='#') 
+     <img src="/img/logo1.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
+     |  Master Quality Cleaning LLC
+    button.navbar-toggler.botonmenu(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasDarkNavbar' aria-controls='offcanvasDarkNavbar')
+      span.navbar-toggler-icon
+    #offcanvasDarkNavbar.offcanvas.offcanvas-end.text-bg-primary.cajamenu(tabindex='-1' aria-labelledby='offcanvasDarkNavbarLabel')
+      .offcanvas-header
+        h5#offcanvasDarkNavbarLabel.offcanvas-title Men&uacute de Navegaci&oacuten
+        button.btn-close.btn-close-white(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+      .offcanvas-body
+        ul.navbar-nav.d-flex.justify-content-end.flex-grow-1.pe-3
+          li.nav-item
+            a.nav-link.active(aria-current='page' href='/') 
+             i.fa-solid.fa-house
+             |  Inicio
+            hr
+          li.nav-item
+            a.nav-link(href='/nosotros') 
+             i.fa-solid.fa-people-group
+             |  Nosotros
+            hr
+          li.nav-item.dropdown
+           a.nav-link(href='/servicios') 
+            i.fa-solid.fa-house-laptop
+            |  Servicios
+           hr
+          li.nav-item.dropdown
+           a.nav-link(href='/testimonios') 
+            i.fa-solid.fa-comment
+            |  Testimonios
+           hr
+           li.nav-item.dropdown
+           a.nav-link(href='/login') 
+            i.fa-solid.fa-user
+            |  Login
+           hr
+   
+    ul.nav.menu
+      li.nav-item
+        a.nav-link.text-light(aria-current='page', href='/',class=(ruta=='/' ? 'active':'')) Inicio
+      li.nav-item
+        a.nav-link.text-light(href='/nosotros', class=(ruta=='/nosotros' ? 'active':'')) Nosotros
+      li.nav-item
+        a.nav-link.text-light(href='/servicios',class=(ruta=='/servicios' ? 'active':'')) Servicios
+      li.nav-item
+        a.nav-link.text-light(href='/testimonios',class=(ruta=='/testimonios' ? 'active':'')) Testimonios
+      li.nav-item
+        a.nav-link.text-light(href='/login',class=(ruta=='/login' ? 'active':''))  Login 

@@ -1,0 +1,122 @@
+.nosotros{
+    color:white;
+    padding: 3em;
+    background-image: linear-gradient(70deg, #9e96f5 0, #7a82ed 25%, #486ee5 50%, #005cdd 75%, #004dd5 100%);
+}
+
+.imagen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+}
+
+.nosotros h2{
+    text-align:center;
+}
+.nosotros p{
+    text-align: center;
+}
+.nosotros .articulo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botonw{
+    background-color: #1abc9c;
+    padding: 0.3em 1em;
+    width: 160px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.articulo a:hover{
+    transform: scale(1.1);
+}
+
+.tarjetas .tarjeta{
+    cursor: pointer;
+    padding: 1em;
+    transition: all 0.2s;
+}
+.tarjetas .tarjeta:hover{
+    transform: scale(1.1);
+}
+.tarjetas .tarjeta .texto h4{
+    text-align: center;
+}
+
+.tarjetas .tarjeta .texto p{
+    text-align: center;
+    color:rgb(80, 77, 77) ;
+}
+.tarjetas .tarjeta .icono span {
+    font-size: 38px;
+    color:rgb(80, 77, 77) ;
+} 
+
+/*acerca de Kerlin*/
+.presentacion .card{
+    height: 370px;
+    width: 370px;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 2%;
+    border:1px solid  #fff;
+    transition: height 0.4s ease-in-out;
+    box-shadow:0px 1px 5px 0px rgb(0,0,0,0.3);
+    text-align: center;
+   
+
+}
+
+.presentacion .card:hover{
+    height: 750px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgb(0,0,0,0.5);
+}
+.presentacion .card-encabezado{
+    color: white;
+    background-image: linear-gradient(70deg, #9e96f5 0, #7a82ed 25%, #486ee5 50%, #005cdd 75%, #004dd5 100%);
+    padding-bottom: 12px;
+}
+.presentacion .card-encabezado img{
+    position:relative;
+    border-radius:50%;
+    display: block;
+    border-top: 8px solid #fff;
+    border-bottom: 8px solid #fff; 
+    object-fit: cover;
+    margin:20px auto;
+    transition: all 0.3s ease;
+}
+
+.presentacion .card .card-acciones{
+    margin-top: 10px;
+}
+.presentacion .card-acciones{
+    padding: 10px 18px;
+}
+
+.nombre{
+    font-size: 20px;
+    font-weight: 500;
+}
+.cargo{
+    font-size: 14px;
+}
+
+.acercade h5{
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.acercade{
+    margin-bottom: 20px;
+}

@@ -1,0 +1,29 @@
+
+@media screen and (min-width:980px){
+    .botonmenu{
+        display:none;
+    }
+}
+
+@media screen and (max-width:980px){
+    .menu{
+        display: none;
+  
+    }
+}
+
+header{
+    margin-bottom:55px;
+}
+
+header .menu li a.nav-link{
+    transition: all 0.3s;
+}
+header .menu li a.nav-link:hover{
+    transform: scale(1.1);
+    color: #1abc9c;
+}
+
+header ul.menu .active{
+    border-bottom: solid 1px white;
+}

@@ -1,0 +1,27 @@
+extends ../layout/index
+block contenido
+    main.container.servicio  
+         section.row 
+          .imagenes.col-12.col-md-6
+            h3=servicio.titulo
+            img.card-img-top(src=`${servicio.imagen}`, loading="lazy" alt="Master Quality Cleaning apartamentos")
+            br
+            h4 
+            p.localidad
+             span
+              i.fa-solid.fa-location-dot 
+             |  #{servicio.localidad}
+          .col-12.col-md-6.d-flex.flex-column.justify-content-between
+            .arriba
+              h5="Nuestro servicio de "+ servicio.titulo
+              p.calificacion 
+              |  Calificación:  
+              span
+               i.fa-solid.fa-star
+              | 5/5 
+              hr
+              p=servicio.descripcion
+            .inferior.d-flex.justify-content-end
+                a.botonw(href=`https://api.whatsapp.com/send?phone=17863717464&text=Hola, Necesito más información sobre el servicio de ${servicio.titulo}`) 
+                 i.fa-brands.fa-whatsapp
+                 |  Reserva

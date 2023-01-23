@@ -1,0 +1,32 @@
+extends ../administracion/index
+block contenidosistema 
+    main.container.listacontacto  
+     .row.justify-content-center 
+        h3 
+         i.fa-solid.fa-file-import
+         |  Bandeja de Entrada.
+        hr
+        .col-12.col-md-8
+          each contacto in jjson.contactos 
+           .card
+            img(src="/img/usuario.png",  loadign="lazy" alt="usuario Master Quality Cleaning",width="60px")
+            h4
+             | #{contacto.dataValues.nombre}
+            hr
+            a.form-control.btn.btn-success(href=`mailto:${contacto.correo}`) 
+             i.fa-solid.fa-envelope 
+             |  #{contacto.dataValues.correo}
+            a.form-control.btn.btn-success(href=`https://wa.me/ ${contacto.telefono}`) 
+                 i.fa-brands.fa-whatsapp
+                 |  #{contacto.dataValues.telefono}
+            p.mensaje
+             i.fa-solid.fa-message
+             |  #{contacto.dataValues.mensaje}
+            .fechac 
+             p.fecha=contacto.dataValues.fecha
+
+     .row.justify-content-center 
+       .col-1.col-md-1
+          a.btn.btn-success(href="/contactos/5&10") 
+               i.fa-solid.fa-angles-right       
+     

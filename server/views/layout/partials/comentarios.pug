@@ -1,0 +1,44 @@
+section.row.testimoniales  
+    h3 
+     | Conoce cada
+     span  Testimonio 
+     | de  nuestros clientes
+section.row.testimonios
+   each testimonio in testimonios 
+    .col-12.col-md-6 
+       .testimonial-wrapper 
+         p.testimonial=testimonio.mensaje
+         .media.d-flex
+           img(src="/img/usuario.png",  loadign="lazy" alt="usuario Master Quality Cleaning",width="60px")
+           .media-body
+             .overview
+               p.name.text-primary=testimonio.nombre 
+               p.details=testimonio.correo.substr(0,3)+"...."+testimonio.correo.substr(testimonio.correo.length-10,testimonio.correo.length)
+               .star-rating 
+                 .list-inline 
+                   case testimonio.calificacion 
+                    when "1"
+                      span
+                        i.fa-solid.fa-star
+                    when "2"
+                      span
+                        i.fa-solid.fa-star
+                        i.fa-solid.fa-star
+                    when "3"
+                      span
+                        i.fa-solid.fa-star
+                        i.fa-solid.fa-star
+                        i.fa-solid.fa-star
+                    when "4"
+                      span
+                       i.fa-solid.fa-star
+                       i.fa-solid.fa-star
+                       i.fa-solid.fa-star
+                       i.fa-solid.fa-star
+                    when "5"
+                       span
+                         i.fa-solid.fa-star
+                         i.fa-solid.fa-star
+                         i.fa-solid.fa-star
+                         i.fa-solid.fa-star
+                         i.fa-solid.fa-star 

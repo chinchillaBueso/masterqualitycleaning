@@ -1,0 +1,49 @@
+extends ../administracion/index
+
+block contenidosistema
+    main.container.testimonioad
+        .row.justify-content-center 
+           h3 
+            i.fa-solid.fa-user
+            |  Administracion de Usuarios
+           hr
+           .col-12.col-md-8
+              h4 Ingresar usuario Nuevo
+              form(action='/usuarios' method="POST")
+               .form-group 
+                 label(for="usuario") Nombre de Usuario 
+                 input(id="usuario",class="form-control", type="text", placeholder="Ingresa tu Nombre de usuario" , name="usuario",required value=usuario)
+                 br
+               .form-group 
+                 label(for="correo") Correo Electrónico 
+                 input(id="correo",class="form-control", type="email", placeholder="Ingresa tu Correo" , name="correo", required value=correo)
+                 br
+               .form-group 
+                 label(for="password") Ingresa Password
+                 input(id="password",class="form-control", type="password", placeholder="Ingresa Password" , name="password", required value=password)
+                 br
+                 if(validaciones)
+                  each validacion in validaciones
+                   p.alert.alert-danger=validacion.msg
+               .form-group.mb-5
+                  input(type="submit" value="Registrar" class="btn btn-success form-control")      
+           .col-12 
+             h3 Lista de Usuarios
+             hr
+             table.table.table-striped  
+                thead 
+                    tr 
+                      th(scope='col') Usuario 
+                      th(scope='col') Correo
+    
+                tbody 
+                 each usuario in usuarios
+                   if columna 
+                    columna=columna+1
+                   tr
+                    td=usuario.usuario 
+                    td=usuario.correo
+                    
+                    td 
+                        a.btn.btn-danger.form-control(href=`/usuarios/${usuario.usuario}`)
+                         i.fa-solid.fa-xmark

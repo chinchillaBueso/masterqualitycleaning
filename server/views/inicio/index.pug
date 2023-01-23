@@ -1,0 +1,65 @@
+extends ../layout/index
+
+block contenido
+ include ../layout/partials/carousel
+ main.container.mt-3
+   section.row.mt-5.tarjetas
+     .col-12 
+        h2 Agenda tu Limpieza
+     .col-12.col-sm-6.col-md-4.d-flex.justify-content-center
+       .tarjeta 
+         .icono.icono.d-flex.justify-content-center  
+           span
+            i.fa-solid.fa-comment
+         .texto
+            h4 Contáctanos 
+            p Escribenos por medio de Whats App , Redes Sociales o nuestra Pagina Web. 
+     .col-12.col-sm-6.col-md-4.d-flex.justify-content-center
+        .tarjeta 
+          .icono.icono.d-flex.justify-content-center  
+             span
+               i.fa-solid.fa-calendar-days
+          .texto
+             h4 Agendamos tu limpieza
+             p Planificamos el día y la hora para tu visita con Nuestro Equipo de Trabajo.
+     
+     .col-12.col-sm-6.col-md-4.d-flex.justify-content-center 
+      .tarjeta 
+       .icono.d-flex.justify-content-center 
+         span
+           i.fa-solid.fa-person-digging
+       .texto
+         h4 Realizamos Tu Limpieza
+         p Cumplimos realizando tu limpieza en la fecha acordada.
+   include ../layout/partials/experiencia      
+   include ../layout/partials/comentarios
+   a.btn.btn-outline-success.mb-3(href="/testimonios") Envía tu comentario
+   section.row.justify-content-center.mt-3
+     .col-12.col-md-8
+          h2 Contáctanos
+          form(action='/' method="POST").mt-3
+           .form-group 
+                span.col-md-1.col-md-offset-2.text-center
+                i.fa.fa-user.bigicon
+                input(id="nombre",class="form-control", type="text", placeholder="Ingresa tu Nombre" , name="nombre",required, value=nombre)
+                br
+           .form-group 
+                span.col-md-1.col-md-offset-2.text-center
+                i.fa.solid.fa-envelope.bigicon
+                input(id="correo",class="form-control", type="email", placeholder="Ingresa tu Correo" , name="correo", required value=correo)
+                br
+           .form-group 
+                span.col-md-1.col-md-offset-2.text-center
+                i.fa.solid.fa-mobile.bigicon
+                input(id="telefono",class="form-control", type="tel", placeholder="Ingresa tu  teléfono" , name="telefono",  required value=telefono)
+                br
+           .form-group 
+                span.col-md-1.col-md-offset-2.text-center
+                i.fa-solid.fa-comment.bigicon
+                textarea#mensaje(class="form-control" name="mensaje",rows="3", placeholder="Deja tu mensaje" required)=mensaje
+                br
+           if(validaciones)
+                 p.alert.alert-danger=validacion[0].msg
+           .form-group
+              input(type="submit" value="Enviar" class="btn btn-success form-control")      
+            

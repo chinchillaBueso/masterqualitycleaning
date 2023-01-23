@@ -1,0 +1,16 @@
+.row
+ .col-12 
+    h3.titulo2=pagina
+    hr
+section.row.servicios 
+      each servicio in servicios  
+        .col-12.col-md-6.col-lg-4.filla
+           .card.card-custom.bg-white.border-white.border-0
+             .card-custom-img(style=`background-image:  linear-gradient(0deg, rgba(77,27,162,1) 18%, rgba(77,27,162,0) 100%),url(${servicio.imagen})`)
+             .card-custom-avatar
+                 img.img-fluid(src=`${servicio.logo}` loading="lazy" alt='master quality servicio de limpieza')
+             .card-body
+                h4.card-title=servicio.titulo
+                p.card-text=servicio.descripcion.substr(0,100) + "..."
+             .card-footer(style='background: inherit; border-color: inherit;')
+                a(href=`servicios/${servicio.id}`,class="btn btn-primary ") Leer mas

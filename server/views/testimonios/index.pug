@@ -1,0 +1,37 @@
+extends ../layout/index
+block contenido 
+ main.container
+     include ../layout/partials/comentarios
+     section.row.testimonio.justify-content-center 
+        hr
+        .col-12.col-md-8
+          h4 ¡Ingresa tu experiencia aquí!
+          form(action='/testimonios' method="POST")
+           .form-group 
+                label(for="nombre") Nombre 
+                input(id="nombre",class="form-control", type="text", placeholder="Ingresa tu Nombre" , name="nombre", value=nombre)
+                br
+           .form-group 
+                label(for="correo") Correo Electrónico 
+                input(id="correo",class="form-control", type="email", placeholder="Ingresa tu Correo" , name="correo", value=correo)
+                br
+           .form-group 
+                label(for="mensaje") Mensaje 
+                textarea#mensaje(class="form-control" name="mensaje",rows="3", placeholder="Deja tu mensaje")=mensaje
+                br
+           .form-group 
+                label(for="calificacion") Calificación
+                select(name="calificacion" class="form-control", value=calificacion)
+                    option(value="") --seleccionar--
+                    option(value="1") 1 estrellas
+                    option(value="2") 2 estrellas 
+                    option(value="3") 3 estrellas 
+                    option(value="4") 4 estrellas 
+                    option(value="5") 5 estrellas
+                br
+                if(validaciones)
+                     .alert.alert-danger=validaciones[0].msg
+           .form-group
+              input(type="submit" value="Enviar Testimonio" class="btn btn-success form-control")      
+            
+          
